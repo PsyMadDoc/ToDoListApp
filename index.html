@@ -1,16 +1,40 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>To Do List</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-	<h1>To Do List</h1>
-	<p id="first">Get it done today.</p>
-	<input id="userinput" type="text" placeholder="enter items">
-	<button id="addtask">Add New Task</button>
-	<ul id="list">
-	</ul>
-	<script type="text/javascript" src="script.js"></script>
-</body>
+  <head>
+    <title>To Do List</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="header">
+          <h1 class="cool_title">To Do List</h1>
+          <p class="motto" id="first">Get it done today.</p>
+        </div>
+        <div class="delete_container">
+          <div class="delete_wrapper">
+            <button class="btn delete" id="delete">
+              Delete All Tasks &ensp; &#x1f5d1;
+            </button>
+          </div>
+        </div>
+        <div class="input">
+          <input
+            class="input_box"
+            id="userinput"
+            type="text"
+            name="task"
+            placeholder="Let's add some tasks."
+          />
+          <button class="btn" id="addtask">Add New Task</button>
+        </div>
+        <ul class="list_items" id="list"></ul>
+      </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
 </html>

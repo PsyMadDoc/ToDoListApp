@@ -1,57 +1,157 @@
-body {
-  padding: 50px;
+* {
+  margin: 0;
+  box-sizing: border-box;
 }
 
-::selection {
-  background: transparent; /* WebKit/Blink Browsers */
-}
-::-moz-selection {
-  background: transparent; /* Gecko Browsers */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+button,
+input {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
 }
 
-.coolTitle {
-  text-align: center;
-  font-family: 'Oswald', Helvetica, sans-serif;
-  font-size: 40px;
-  transform: skewY(-10deg);
-  letter-spacing: 4px;
-  word-spacing: -8px;
-  color: tomato;
-  text-shadow: 
-    -1px -1px 0 firebrick,
-    -2px -2px 0 firebrick,
-    -3px -3px 0 firebrick,
-    -4px -4px 0 firebrick,
-    -5px -5px 0 firebrick,
-    -6px -6px 0 firebrick,
-    -7px -7px 0 firebrick,
-    -8px -8px 0 firebrick,
-    -30px 20px 40px dimgrey;
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+
+.wrapper {
+  max-width: 800px;
+  min-height: 80vh;
+  margin: 50px;
+  border: solid 1px #1e5266;
+  border-radius: 5px;
+  background-color: #ffbd60;
+}
+
+.cool_title {
+  color: #11998e;
+  font-size: 70px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-variant: small-caps;
+  margin: 50px 50px 0 50px;
+}
+
+@supports (-webkit-text-stroke: 1px #1e5266) {
+  .cool_title {
+    -webkit-text-stroke: 1px #1e5266;
+  }
+}
+
+.motto {
+  margin: 20px 0;
+  text-align: end;
+  margin-right: 50px;
+}
+
+.input {
+  margin: 30px 50px;
+}
+
+.input_box {
+  padding-right: 30px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 2px solid #3aa0a1;
+  transition: border-color 0.2s;
+  font-weight: 700;
+  margin-right: 20px;
+}
+
+.input_box::placeholder {
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #3aa0a1;
+}
+
+.input_box:focus::placeholder {
+  /* color: #3aa0a1;
+  opacity: 1; */
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fddcad;
+}
+
+.input_box:focus {
+  border-bottom: 2px solid #3aa0a1;
+  font-weight: 700;
+  /* border-width: 3px; */
+  border-image: linear-gradient(to left, #3aa0a1, #ffbd60);
+  border-image-slice: 1;
+}
+
+.btn {
+  color: #fff;
+  text-decoration: none;
+  background: #3aa0a1;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+}
+
+.btn:hover {
+  background: #1e5266;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.4s ease 0s;
+}
+
+.delete {
+  background: #a8201a;
+  margin-left: 50px;
+  display: table;
+  margin: 0 auto;
+}
+
+.delete:hover {
+  background: #1e5266;
+}
+
+.delete_wrapper {
+  width: 100%;
+  background-color: #fddcad;
+  padding: 10px 0;
+  margin: 50px 0;
 }
 
 .done {
-  
   text-decoration: line-through;
 }
 
-ul {
+.list_items {
+  margin: 0 50px;
   padding: 0;
 }
 
-li {
-    margin: 10px 0;
-    list-style-type: none;
+.list_items li {
+  margin: 20px 0;
+  list-style-type: none;
 }
 
-li:hover {
+.list_items li:hover {
   cursor: pointer;
 }
 
-li::selection {
+.list_items li::selection {
   background: transparent;
 }
-
-
 
 /* Style the close button */
 .close {
@@ -60,11 +160,9 @@ li::selection {
   margin-left: 20px;
 
   /*left: 0px;*/
-
 }
 
 .close:hover {
   background-color: #f44336;
   color: white;
 }
-
